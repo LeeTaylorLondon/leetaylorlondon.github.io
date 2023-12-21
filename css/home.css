@@ -1,0 +1,509 @@
+/* STRUCTURE */
+
+/* body *{
+    outline: black solid 1px;
+} */
+
+
+/* html,body{
+   height:100% 
+} */
+
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 500% 500%;
+    animation: gradient 15s ease infinite;
+}
+
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-right: 7%;
+    margin-left: 7%;
+    padding:10px;
+    padding-bottom:60px;
+}
+
+#page-container {
+    color: white;
+    padding:0;
+    height:100%;
+    margin: auto;
+    width: 94%;
+    max-width:1500px;
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 2.5rem;    /* Footer height */
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;            /* Footer height */
+}
+
+header {
+    margin-top: 1em;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 1em;
+    margin-left:  1em; 
+}
+
+nav {
+
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0;
+}
+
+ul{
+    margin-top: 0;
+    list-style-type: none;
+
+}
+
+nav ul li{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.about-me{
+    padding: 30px;
+    color: white;
+    line-height: 2em;
+    margin-right: 10%;
+    max-width: 400px;
+    margin-bottom: 20%;
+    border-radius: 6px;
+
+
+  
+    border: 1vmin solid hsl(100 100% 60%);
+    border-image-slice: 1;
+    
+    /*  leverage cascade for cross-browser gradients  */
+    border-image-source: linear-gradient(
+      hsl(100 100% 60%),
+      50%,
+      hsl(200 100% 60%)
+    );
+    border-image-source: radial-gradient(
+      hsl(100 100% 60%),
+      75%,
+      hsl(200 100% 60%)
+    );
+    border-image-source: conic-gradient(
+      hsl(100 100% 60%), 
+      hsl(200 100% 60%),
+      hsl(100 100% 60%)
+    );
+}
+
+.about-me ul{
+    display: flex;
+    margin-bottom: 0px;
+}
+
+.about-me img{
+    max-height: 35px;
+}
+
+.about-me li{
+    margin-right: 30px;
+}
+
+.about-me a{
+    cursor:pointer;
+}
+
+
+footer{
+    font-family: 'Raleway', sans-serif;
+    font-size: .7em;
+    text-align: center;
+    display: block;
+    width:100%;
+    margin-bottom: 0px;
+
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+
+/* TEXT FORMATING STUFF*/
+header h1{
+    margin-top: 0px;
+    padding: 0;
+}
+
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+}
+
+nav a h2{
+    margin-top: 0;
+}
+
+nav a h2:hover{
+    color: yellow;
+    transform: scale(1.1);
+    transition-duration: .2s;
+    transition-timing-function: ease;
+}
+
+.about-me{
+    font-family: 'Raleway', sans-serif;
+}
+
+.about-me h3{
+    font-size: 2em;
+    margin-top: 0px;
+}
+
+.about-me p{
+    font-size: 1.2em;
+}
+
+footer a{
+    font-size: 1.2em;
+    color: #FFFFFF;
+    
+    margin: auto;
+    
+}
+
+
+footer a:hover{
+    color: yellow;
+}
+
+footer ul{
+    display: flex;
+    padding-right: 10vw;
+    padding-left: 10vw;
+
+}
+
+footer li{
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+footer div{
+    height:30px;
+    display: flex;
+}
+
+footer img{
+    max-width: 30px;
+    margin: auto;
+    margin-right: 5px;
+}
+
+
+#projects img{
+    width: 40vw;
+    max-width: 600px;
+    border-radius: 4em;
+
+}
+
+
+
+#projects{
+    font-family: 'Raleway', sans-serif;
+    margin-right: 10vw;
+    margin-left: 10vw;
+    margin-bottom: 60px;
+    
+}
+
+#projects a{
+    color:white;
+    text-decoration: none;
+}
+
+#projects a:hover{
+    color: yellow;
+    transform: scale(1.05);
+    transition-duration: .2s;
+    transition-timing-function: ease;
+}
+
+#projects h3{
+    margin-bottom: 0;
+    font-size: 1.7em;
+}
+
+#projects h4{
+    margin-bottom: 0;
+}
+
+.project{
+    display: flex;
+    padding-bottom: 80px;
+    
+
+}
+
+.vertical{
+    padding-left: 2vw;
+    padding-right: 2vw;
+  
+    
+}
+
+.vertical > ul{
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.vertical > ul > li{
+    margin-right: .7em;
+    margin-left: 0;
+}
+
+.vertical > ul > li{
+    flex-direction: row-reverse;
+}
+
+.vertical h4+ul>li{
+    margin-top: .5em;
+}
+
+.vertical p+ul{
+    display: block;
+    padding-left: 1em;
+    list-style-type: disc;
+}
+
+.vertical p+ul li{
+    text-align: left;
+    flex-direction: row;
+    margin-top: .7em;
+}
+
+.slide-wrapper{
+    margin: auto;
+}
+
+.slideshow-container{
+    position: relative;
+    margin: auto;
+}
+
+.slideshow-container img{
+    position: relative;
+    display: none;
+}
+
+.slideshow-container .active{
+    display: block;
+}
+
+.dot-container,.wc_dot-container{
+    
+    width: 250px;
+    margin: 20px auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+button{
+    outline: none;
+    cursor: pointer;
+}
+
+.dot-container button{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    background-color: transparent;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+}
+
+.wc_dot-container button{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    background-color: transparent;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+}
+
+.dot-container button:nth-child(1){
+    background-color: #ffffff;
+}
+
+.wc_dot-container button:nth-child(1){
+    background-color: #ffffff;
+}
+
+#prev,#next,#wc_prev,#wc_next{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    background-color: #ded4d4;
+    color: #000000;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+#prev,#wc_prev{
+    left: 5px;
+}
+
+#next,#wc_next{
+    right: 5px;
+}
+
+/* mobile friendly stuff*/
+@media (max-width: 990px) {
+    body {
+        display: block;
+        animation: gradient 7s ease infinite;
+    }
+    #page-container {
+        
+        height:100%;
+        width: 100%;
+        max-width:1500px;
+        position: relative;
+        min-height: 100vh;
+    }
+    .grid{
+        margin: 0px;
+    }
+    header{
+        letter-spacing: normal;
+        margin-left: 0px;
+        font-size: 6em;
+    }
+    .grid{
+        display: block;
+    }
+    .about-me{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        
+        font-weight: 600;
+        max-width: fit-content;
+        font-size: 2.3em;
+    }
+    .about-me img{
+        height: 10vw;
+        max-height: none;
+        margin: auto;
+    }
+    .about-me li{
+        margin: auto;
+    }
+
+    nav a{
+       font-size: 3.3em;
+        letter-spacing: normal;
+        margin: auto;
+    }
+    #projects{
+        margin: 0px;
+    }
+    .project{
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+    #projects img{
+        max-width: none;
+        width: 100%;
+        border-radius: 5%;
+    }
+    #projects h4{
+        font-size: 2.5em;
+        font-weight: 600;
+    }
+    #projects p{
+        font-size: 2.2em;
+        font-weight: 600;
+    }
+    #projects li{
+        font-size: 2.2em;
+        font-weight: 600;
+    }
+    .vertical{
+        order: 1;
+        
+        margin-left: 5%;
+    }
+    #content-wrap {
+        padding-bottom: 4rem;    /* Footer height */
+    }
+    footer{
+        font-size: .8em;
+    }
+    footer ul{
+        flex-direction: column-reverse;
+    }
+}
+
+
+.highlighted-text-shadow {
+    text-shadow:
+      /* regular text-shadow */
+      0 .15ch 15px var(--shadow),
+      /* text-shadow highlight */
+      0 -2px 0 var(--highlight);
+}
+
+
+:root {
+    --hue: 320; /* change me */
+    --bg: oklch(35% .3 var(--hue));
+    --text: oklch(85% .1 var(--hue));
+    --shadow: oklch(15% .2 var(--hue));
+    --highlight: oklch(98% .05 var(--hue));
+  } 
